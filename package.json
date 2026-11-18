@@ -10,6 +10,9 @@
     "reactbit": "node scripts/agregar-reactbit.mjs"
   },
   "dependencies": {
+    "gsap": "^3.15.1",
+    "motion": "^12.43.0",
+    "ogl": "^1.0.11",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
   },

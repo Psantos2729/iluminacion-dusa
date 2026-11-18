@@ -3,22 +3,39 @@ import { negocio, productos } from '../contenido.js';
 import BotonWA from '../componentes/BotonWA.jsx';
 import { ruta as pub } from '../lib/ruta.js';
 import Reveal from '../componentes/Reveal.jsx';
+import Brillo from '../componentes/Brillo.jsx';
+import FoldText from '../reactbits/FoldText/FoldText.jsx';
+import '../reactbits/FoldText/FoldText.css';
+import ElectricLogo from '../reactbits/ElectricLogo/ElectricLogo.jsx';
+import '../reactbits/ElectricLogo/ElectricLogo.css';
+
+/* Silueta de foco (stand-in del logo, que aún no llega): ElectricLogo traza los bordes de esta forma. */
+const FOCO = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(
+  '<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><path d="M32 4a19 19 0 0 0-11 34.5V45h22v-6.5A19 19 0 0 0 32 4z" fill="#fff"/><rect x="21" y="48" width="22" height="4" fill="#fff"/><rect x="23" y="55" width="18" height="4" fill="#fff"/></svg>'
+)}`;
 
 export default function Inicio() {
   const [on, setOn] = useState(false);
   return (
     <>
-      <section className={`heroe envoltura ${on ? 'is-on' : ''}`} aria-labelledby="h1">
-        <span className="heroe__foco" aria-hidden="true" />
-        <button type="button" className="interruptor" aria-pressed={on} onClick={() => setOn(!on)}>
-          <span className="interruptor__pista" aria-hidden="true"><span /></span>{on ? 'Apagar la luz' : 'Prender la luz'}
-        </button>
-        <h1 id="h1" className="heroe__t"><span>Tu espacio,</span><span>tu esencia, tu <em>luz.</em></span></h1>
-        <div className="heroe__pie">
-          <p className="t-lead">{negocio.nombre}: lámparas, ventiladores, espejos LED y alumbrado público LED. Cuéntanos qué necesitas y te cotizamos.</p>
-          <BotonWA />
-        </div>
-      </section>
+      <Brillo>
+        <section className={`heroe envoltura ${on ? 'is-on' : ''}`} aria-labelledby="h1">
+          <div className="heroe__foco" aria-hidden="true">
+            <ElectricLogo src={FOCO} color="#FFE2A8" glowColor="#F2A93B" scale={0.8} intensity={on ? 1.2 : 0.35} glow={on ? 1.2 : 0.4} interactive={on} theme="dark" />
+          </div>
+          <button type="button" className="interruptor" aria-pressed={on} onClick={() => setOn(!on)}>
+            <span className="interruptor__pista" aria-hidden="true"><span /></span>{on ? 'Apagar la luz' : 'Prender la luz'}
+          </button>
+          <h1 id="h1" className="heroe__t">
+            <span><FoldText text="Tu espacio," fontSize="clamp(2.1rem, 8.4vw, 9.5rem)" fontWeight={500} /></span>
+            <span><FoldText text="tu esencia, tu" fontSize="clamp(2.1rem, 8.4vw, 9.5rem)" fontWeight={500} />{' '}<FoldText text="luz." fontSize="clamp(2.1rem, 8.4vw, 9.5rem)" fontWeight={500} color="#F2A93B" style={{ fontStyle: 'italic' }} /></span>
+          </h1>
+          <div className="heroe__pie">
+            <p className="t-lead">{negocio.nombre}: lámparas, ventiladores, espejos LED y alumbrado público LED. Cuéntanos qué necesitas y te cotizamos.</p>
+            <BotonWA />
+          </div>
+        </section>
+      </Brillo>
 
       <section className="seccion envoltura" aria-labelledby="h-lista">
         <h2 id="h-lista" className="t-head lista-t">Lo que encuentras<br />en DUSA</h2>

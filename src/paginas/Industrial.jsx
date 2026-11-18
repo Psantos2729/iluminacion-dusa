@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { industrial, negocio } from '../contenido.js';
 import BotonWA from '../componentes/BotonWA.jsx';
+import Brillo from '../componentes/Brillo.jsx';
+import TrueFocus from '../reactbits/TrueFocus/TrueFocus.jsx';
+import '../reactbits/TrueFocus/TrueFocus.css';
 import { ruta as pub } from '../lib/ruta.js';
 import { useContador } from '../hooks/useContador.js';
 
@@ -32,10 +35,15 @@ export default function Industrial() {
   const f = industrial.familias.find((x) => x.id === fam);
   return (
     <>
-      <section className="envoltura encabezado">
-        <h1 className="t-display">Alumbrado<br />industrial</h1>
-        <p className="t-lead">Línea {industrial.marca} para bodegas, calles, canchas y exteriores. Elige la familia y la potencia para ver sus lúmenes.</p>
-      </section>
+      <Brillo>
+        <section className="envoltura encabezado">
+          <h1 className="t-display">Alumbrado<br />industrial</h1>
+          <p className="t-lead">Línea {industrial.marca} para bodegas, calles, canchas y exteriores. Elige la familia y la potencia para ver sus lúmenes.</p>
+          <div className="enfoque" aria-label="Familias: reflectores, UFO, cobra y solar">
+            <TrueFocus sentence="Reflectores UFO Cobra Solar" borderColor="#F2A93B" blurAmount={4} animationDuration={0.5} pauseBetweenAnimations={1.2} />
+          </div>
+        </section>
+      </Brillo>
 
       <figure className="envoltura foto-ancha">
         <div className="foto"><img src={pub('fotos/estadio.webp')} alt="Estadio de noche con reflectores encendidos sobre la cancha" width="1591" height="1061" /></div>

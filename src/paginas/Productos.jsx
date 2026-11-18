@@ -1,13 +1,16 @@
 import { productos } from '../contenido.js';
 import BotonWA from '../componentes/BotonWA.jsx';
+import Brillo from '../componentes/Brillo.jsx';
 
 export default function Productos() {
   return (
     <>
-      <section className="envoltura encabezado">
-        <h1 className="t-display">Productos</h1>
-        <p className="t-lead">Estas son las líneas que mostramos en Instagram. Precios y existencias se confirman al cotizar.</p>
-      </section>
+      <Brillo>
+        <section className="envoltura encabezado">
+          <h1 className="t-display">Productos</h1>
+          <p className="t-lead">Estas son las líneas que mostramos en Instagram. Precios y existencias se confirman al cotizar.</p>
+        </section>
+      </Brillo>
       <section className="envoltura seccion">
         <ul className="productos">
           {productos.map((p) => (

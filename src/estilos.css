@@ -164,7 +164,7 @@ p { text-wrap: pretty; }
 /* Portada: frase a escala de póster; "luz" va en ámbar */
 .heroe { padding-block: clamp(3rem, 9vw, 8rem) var(--seccion); display: grid; gap: clamp(2.5rem, 5vw, 4.5rem); }
 .heroe__t { font-size: clamp(2.1rem, 8.4vw, 9.5rem); line-height: .98; letter-spacing: -0.035em; text-wrap: nowrap; }
-.heroe__t span { display: block; }
+.heroe__t > span { display: block; }
 .heroe__t em { font-style: italic; color: var(--acento); }
 .heroe__pie { display: grid; grid-template-columns: minmax(0, 36rem) auto; justify-content: space-between; align-items: end; gap: var(--relleno); }
 @media (max-width: 47.99em) { .heroe__pie { grid-template-columns: 1fr; justify-items: start; } }
@@ -215,6 +215,16 @@ p { text-wrap: pretty; }
   .heroe__foco { transition: opacity 400ms ease, transform 700ms var(--ease-out); }
 }
 .heroe.is-on .heroe__foco { opacity: 1; transform: none; }
+
+/* Efectos de React Bits */
+.brillo { height: auto; }
+.brillo > .glow-cursor__content { height: auto; }
+.heroe__foco { opacity: 1; transform: none; border-radius: 0; background: none; width: clamp(9rem, 30vw, 28rem); }
+.heroe.is-on .heroe__foco { opacity: 1; }
+.heroe__t .fold-text { white-space: nowrap; }
+.enfoque { margin-top: 1rem; }
+.enfoque .focus-container { justify-content: flex-start; gap: .6em 1.5rem; }
+.enfoque .focus-word { font-family: var(--serif); font-size: var(--t-head); font-weight: 500; color: var(--tinta); }
 
 /* Fotos */
 .foto-ancha { margin-top: 0; margin-bottom: calc(var(--seccion) / 2); }
