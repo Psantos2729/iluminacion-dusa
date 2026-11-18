@@ -1,0 +1,4 @@
+/* A. Barbería / oficio clásico (de Santos Barbería). Titulares en MAYÚSCULAS condensadas. */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap');
+:root{--fondo:#111111;--papel:#1A1A1A;--tinta:#F2E9DC;--nota:#9B958C;--accion:#D8C3A5;--accion-tinta:#111111;--acento:#A88B5A;--sobre-acento:#111111;--oscuro:#24211D;--sobre-oscuro:#F2E9DC;--serif:'Bebas Neue','Oswald','Arial Narrow',Impact,sans-serif;--sans:'Inter',system-ui,sans-serif;--radio:0px}
+h1,h2,h3{text-transform:uppercase;line-height:.9}

@@ -1,0 +1,4 @@
+/* D. Óptica / editorial minimal (de OKIO). Letra ligera, mucha foto. */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+:root{--fondo:#F2F2F2;--papel:#FFFFFF;--tinta:#181A1B;--nota:#5C5F61;--accion:#181A1B;--accion-tinta:#F2F2F2;--acento:#5B9A3F;--sobre-acento:#FFFFFF;--oscuro:#181A1B;--sobre-oscuro:#F2F2F2;--serif:'Roboto',system-ui,sans-serif;--sans:'Roboto',system-ui,sans-serif;--radio:0px}
+h1,h2,h3{font-weight:300}

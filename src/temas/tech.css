@@ -1,0 +1,4 @@
+/* C. Tecnología / agencia (de WebYa). Casi negro y azul eléctrico. */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500&display=swap');
+:root{--fondo:#08090D;--papel:#101218;--tinta:#D7DAE2;--nota:#898D9A;--accion:#4169FF;--accion-tinta:#FFFFFF;--acento:#69A5FF;--sobre-acento:#08090D;--oscuro:#101218;--sobre-oscuro:#FFFFFF;--serif:'Sora','Segoe UI',system-ui,sans-serif;--sans:'Inter','Segoe UI',system-ui,sans-serif;--radio:14px}
+h1,h2,h3{letter-spacing:-.04em}
